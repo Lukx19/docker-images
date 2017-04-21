@@ -1,7 +1,7 @@
 #!/bin/sh
 
-default_workspace="$HOME/ros/workspace"
-default_extra_dirs="$HOME/robocup $HOME/ros"
+default_workspace="$HOME/workspace/ros"
+default_extra_dirs="/home/backup/bags"
 
 ros_latest=$(cat ros-latest)
 ros_workspace=${ROS_WORKSPACE:-$default_workspace}
@@ -35,5 +35,6 @@ docker run -it \
 	$extra_opts \
 	--workdir=$ros_workspace \
 	-h ros-devel \
+	--name ros-devel \
 	--rm=true \
-	hrnr/ros-devel:${1:-$ros_latest}
+	lukx19/ros-devel:${1:-$ros_latest}

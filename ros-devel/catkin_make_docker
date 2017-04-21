@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker exec ros-devel zsh -c "source /opt/ros/kinetic/setup.zsh && catkin_make $@"

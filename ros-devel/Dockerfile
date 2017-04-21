@@ -6,7 +6,9 @@ RUN apt update && apt install -y \
 	xterm \
 	zsh \
 	gdb \
-	openssh-client
+	openssh-client \
+	mc \
+	clang
 
 # additional ros packages
 RUN apt install -y \
@@ -19,6 +21,12 @@ RUN apt install -y \
 	ros-${ros_version}-hector-mapping \
 	ros-${ros_version}-opencv3 \
 	ros-${ros_version}-map-server \
+	ros-${ros_version}-pcl-conversions \
+	ros-${ros_version}-pcl-msgs \
+	ros-${ros_version}-pcl-ros \
+	ros-${ros_version}-libg2o \
+	ros-${ros_version}-tf-conversions \
+	ros-${ros_version}-laser-geometry \
 	python-bloom
 
 # cleanup

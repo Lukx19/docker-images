@@ -1,4 +1,4 @@
-FROM hrnr/ros-devel-kinetic
+FROM lukx19/ros-devel:kinetic
 
 #python libraries for building
 RUN apt update && apt install -y \
